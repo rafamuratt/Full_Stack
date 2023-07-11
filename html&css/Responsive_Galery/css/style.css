@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    background-color: black;
+    color:rgb(86, 119, 98)
+}
+
+@keyframes anim {
+    0%   {left:0px;width:2px; background-color: rgb(86, 119, 98)}
+    25%  {left:0px;background-color: rgb(86, 119, 98);}
+    50%  {left:0px;}
+    75%  {left:0px;}
+    100% {left:0px;width:100%;background:rgb(74, 209, 209);}
+}
+
+.anim{
+    margin-top: 15px;
+    margin-left: 15px;
+    width: 2px;
+    height: 2px;
+    animation-name: anim;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+     background-color: rgb(74, 209, 209);
+    width: 100%;  
+    
+}
+
+header{
+    margin: 15px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap; 
+    height: 100px;
+}
+
+.w100{                      /* width: 100% */ 
+    width: 100%;
+    min-width: 500px;
+    padding: 0 10px;
+}
+
+.menu{
+    margin-top: 30px;
+    text-align: center;
+
+    
+}
+
+.wrapper{
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    
+}
+
+.wrapper .img{width: 25%;}       /* big screen: 4 images side to side  */
+
+img{
+    max-width: 100%;
+    max-height: 75%;
+    border: 1px solid black;
+    border-radius: 30px;
+    
+}
+
+
+
+
+
+
+@media screen and (max-width: 1024px) {  /* tablet screen: 3 images side to side */
+    .wrapper .img{width: 33.3%;}
+}
+
+@media screen and (max-width: 768px) {  /* big smartphone screen: 2 images side to side */
+    .wrapper .img{width: 50%;}
+}
+
+@media screen and (max-width: 580px) {  /* small smartphone screen: 1 image per row */
+    .wrapper .img{width: 100%;}
+
+}
+    
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(72, 47, 112);
+    color: #cccc;
+}
+
