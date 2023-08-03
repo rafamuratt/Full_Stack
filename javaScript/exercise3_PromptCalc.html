@@ -1,0 +1,43 @@
+<html> <!-- Basic prompt based calculator-->
+    <body>
+        <script>
+            var firstNum = prompt("Enter the first number: ");
+            firstNum = parseFloat(firstNum);
+            var signal = prompt("Type the operator signal (+, -, * or /: ");
+            
+            while(signal != '+' && signal != '-' && signal != '*' && signal != '/'){
+                alert("Invalid entry!!!");
+                signal = prompt("Type the operator signal (+, -, * or /: ");
+            }
+            
+            var secondNum = prompt("Type the second number: ");
+            secondNum = parseFloat(secondNum);
+            var result = 0;
+
+            switch(signal){
+                case '+':
+                    result = firstNum + secondNum;
+                break;
+
+                case '-':
+                    result = firstNum - secondNum;
+                break;
+
+                case '*':
+                    result = firstNum * secondNum;
+                break;
+
+                case '/':
+                    result = firstNum / secondNum;
+                break;
+
+                default:
+                    alert("Invalid entry");
+                break;
+            }
+            
+            alert("The result is = "+result);
+
+        </script>
+    </body>
+</html>
